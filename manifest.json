@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Sponsor Skipper",
+  "version": "1.0",
+  "description": "Skips YouTube sponsors using SponsorBlock.",
+  "permissions": ["scripting", "activeTab", "tabs"],
+  "host_permissions": ["https://www.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Sponsor Skipper"
+  }
+}
